@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: nombre-de-tu-aplicacion
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"  # Cambia 'app.py' por el nombre de tu archivo principal si es diferente
+    envVars:
+      - key: PORT
+        value: "5000"
